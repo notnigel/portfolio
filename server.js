@@ -101,7 +101,7 @@ if (appEnv.services['cloudantNoSQLDB'] || appEnv.getService(/cloudant/)) {
 }
 
 //serve static file (index.html, images, css)
-app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/app'));
 
 
 
