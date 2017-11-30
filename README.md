@@ -1,4 +1,13 @@
-This is a resume page I built for myself using a bootstrap template https://github.com/BlackrockDigital/startbootstrap-resume.
+This is a resume page I built for myself.
+
+If you want to use this template for your self edit the following files
+app/scripts/app.js
+app/images/profile.jpg
+app/docs/Nigel_David_Resume_xxxx.pdf
+
+Note: If you want to host it on IBM Cloud/Bluemix edit manifest.yml. Follow the steps in the IBM Cloud Hosting Info section below. If you're an IBM employee make sure to use the command cf login --sso with the windows command prompt (no third party CLI).
+
+Credit for the bootstrap template comes from https://github.com/BlackrockDigital/startbootstrap-resume.
 
 Current features and tools:
 Bootstrap

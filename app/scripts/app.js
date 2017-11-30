@@ -1,5 +1,15 @@
 var app = angular.module('myApp', []);
 
+app.controller('commonController', function($scope) {
+	$scope.title = "Nigel David - Portfolio";
+	$scope.resumePath = "docs/Nigel_David_Resume_2017.pdf";
+
+	//Helper functions
+	$scope.exists = function (property){
+		return typeof(property) != 'undefined' ? true : false;
+	};
+});
+
 app.controller('aboutController', function($scope) {
 	$scope.firstname = "Nigel";
 	$scope.lastname = "David";
@@ -8,6 +18,12 @@ app.controller('aboutController', function($scope) {
 	$scope.aboutText =  "Nigel David is a Web Developer in IBM’s Global Business Services organization. He is an adaptable, organized, and " +
 						"detail oriented software engineer. His background comes from his degree in computer science and positions as a web " +
 						"developer. He has recent experience as a scrum master, system engineer, and developer for AT&T telecommunication software.";
+	$scope.linkedInLink = "https://www.linkedin.com/in/nigel-david-95630472";
+	$scope.gitHubLink = "https://github.com/notnigel?tab=repositories";
+
+	$scope.getEmailHref = function(email) {
+		return "mailto:" + email;
+	};
 }); 
 
 app.controller("experienceController", function($scope) {
@@ -40,10 +56,6 @@ app.controller("experienceController", function($scope) {
 	];
 
 	//Helper functions
-	$scope.exists = function (property){
-		return typeof(property) != 'undefined' ? true : false;
-	};
-
 	$scope.getProjectAccountLine = function (project, account) {
 		if(typeof(project) == 'undefined')
 			return account;
@@ -62,11 +74,18 @@ app.controller("educationController", function($scope) {
 			school: "Texas State University",
 			dates: "August 2008 – May 2013",
 			major: "Bachelor of Science in Computer Science",
-			minor: "",
-			relevantCourses:"Relevant Courses: Software Engineering, Networks, Parallel Programming, Human Factors, Object" +
-							"Oriented Programming, Computer Architecture, and fundamental programming courses"
+			relevantCourses:"Software Engineering, Networks, Parallel Programming, Human Factors, Object Oriented Programming, Computer Architecture, and fundamental programming courses"
 		}
-	];	
+	];
+
+	//Helper functions
+	$scope.getGpa = function(gpa) {
+		return "GPA: " + gpa;
+	};
+
+	$scope.getRelavantCourses = function(relavantCourses) {
+		return "Relevant Courses: " + relavantCourses;
+	};
 });
 
 app.controller("skillsController", function($scope) {
@@ -109,3 +128,7 @@ app.controller("skillsController", function($scope) {
 		}
 	]
 });
+
+app.controller('interestsController', function($scope) {
+	$scope.interestsLine = "When I'm not working, I like to further myself through learning. I am an avid mountain biker and traveller.";
+})
