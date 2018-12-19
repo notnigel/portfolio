@@ -22,7 +22,7 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>    
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
 
 </head>
 
@@ -33,7 +33,7 @@
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">{{title}}</span>
       <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="images/profile.jpg" alt="">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="images/headshot.jpg" alt="">
       </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +71,7 @@
         <h1 class="mb-0">{{firstname}}
           <span class="text-primary">{{lastname}}</span>
         </h1>
-        <div class="subheading mb-5">{{location}} · 
+        <div class="subheading mb-5">{{location}} ·
           <a ng-href="{{getEmailHref(email)}}">{{email}}</a>
         </div>
         <p class="mb-5">{{aboutText}}</p>
@@ -106,7 +106,7 @@
             <div class="subheading mb-3">{{experienceItem.company}}</div>
             <div class="subheading mb-3">{{getProjectAccountLine(experienceItem.project,experienceItem.client)}}</div>
             <p>{{experienceItem.description}}</p>
-            <p ng-if="exists(experienceItem.toolsUsed)">{{getToolsUsed(experienceItem.toolsUsed)}}</p>            
+            <p ng-if="exists(experienceItem.toolsUsed)">{{getToolsUsed(experienceItem.toolsUsed)}}</p>
           </div>
           <div class="resume-date text-md-right">
             <span class="text-primary">{{experienceItem.dates}}</span>
@@ -159,7 +159,7 @@
 
   <!-- Custom scripts -->
   <script src="scripts/resume.js"></script>
-  <script src="scripts/app.js"></script>  
+  <script src="scripts/app.js"></script>
 
 </body>
 
