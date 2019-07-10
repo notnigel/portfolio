@@ -1,8 +1,8 @@
 var app = angular.module('myApp', []);
 
 app.controller('commonController', function($scope) {
-	$scope.title = "Nigel David - Portfolio";
-	$scope.resumePath = "docs/Nigel_David_Resume_2018.pdf";
+	$scope.title = "Nigel David - CV";
+	$scope.resumePath = "docs/Nigel_David_Resume_2019.pdf";
 
 	//Helper functions
 	$scope.exists = function (property){
